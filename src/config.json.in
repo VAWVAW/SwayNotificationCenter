@@ -6,6 +6,7 @@
   "control-center-layer": "top",
   "layer-shell": true,
   "layer-shell-cover-screen": true,
+  "output": "auto",
   "cssPriority": "application",
   "control-center-margin-top": 0,
   "control-center-margin-bottom": 0,

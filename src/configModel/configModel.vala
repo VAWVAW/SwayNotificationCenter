@@ -349,6 +349,12 @@ namespace SwayNotificationCenter {
          */
         public bool layer_shell_cover_screen { get; set; default = true; }
 
+        /**
+         * The output to display the layer surfaces on.
+         * "auto" for automatic selection
+         */
+        public string output { get; set; default = "auto"; }
+
         /** The CSS loading priority */
         public CssPriority cssPriority { // vala-lint=naming-convention
             get; set; default = CssPriority.APPLICATION;
