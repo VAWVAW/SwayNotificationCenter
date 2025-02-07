@@ -430,6 +430,17 @@ namespace SwayNotificationCenter {
                     if (monitor != null) return monitor;
                 }
             }
+            for (int num = 0; num < num_monitors; num++) {
+                unowned Gdk.Monitor? monitor = display.get_monitor (num);
+                if (monitor != null) {
+                  string? manufacturer = monitor.get_manufacturer ();
+                  string? model = monitor.get_model ();
+
+                  if (manufacturer != null && model != null &&
+                      manufacturer.strip ().down () + " " + model.strip ().down () == output_name)
+                    return monitor;
+                }
+            }
             critical ("Monitor \"%s\" not found...", output_name);
             return null;
         }
