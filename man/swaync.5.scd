@@ -34,6 +34,13 @@ config file to be able to detect config errors
 	description: Wether or not the windows should be opened as layer-shell ++
 		surfaces. Note: Requires swaync restart to apply
 
+*output* ++
+	type: string ++
+	default: auto ++
+	description: The output to display the layer surfaces on. \"auto\" for automatic ++
+		selection. Supports both the name and make + model (without the serial so you ++
+		need to drop the last part) see *sway-output*(5)
+
 *cssPriority* ++
 	type: string ++
 	default: application ++
